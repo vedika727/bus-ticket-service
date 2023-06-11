@@ -11,7 +11,7 @@ const UsersSchema = new mongoose.Schema({
     required: true
   },
   isAdmin: {
-    type: Bookean,
+    type: Boolean,
     required: true
   }
 });

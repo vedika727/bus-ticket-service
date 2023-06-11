@@ -1,26 +1,26 @@
-
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const TicketsSchema = new mongoose.Schema({
+//   _id: mongoose.String,
   seatNo: {
     type: Number,
-    required: true
+    required: true,
   },
   busNo: {
     type: String,
-    required: true
+    required: true,
   },
   ticketStatus: {
     type: String,
     required: true,
-    default: "close"
+    default: "open",
   },
   bookingDate: {
-    type: Date
+    type: Date,
   },
   passengerDetails: {
-    type: Object
-  }
+    type: Object,
+  },
 });
 
-module.exports = Tickets = mongoose.model('tickets', TicketsSchema);
+module.exports = Tickets = mongoose.model("tickets", TicketsSchema);
